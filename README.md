@@ -1,3 +1,17 @@
+It took me about a day to make this, not including time I spent refreshing my knowledge with a React Udemy course.
+
+Things I'd improve:
+
+- Styling. I'm still getting to grips with CSS and how HTML is laid out so there are styling issues with things not quite aligned, plus a big white screen before you load the data.
+
+- Loading message. This is added directly depending on the loading state/if data has been fetched. I feel it should instead be configured using state, like a string property that is updated according to the loading status for example.
+
+- Layout of the data. I wanted to have the data organised by 24-hour day objects laid out horizontally that would then be filled with whatever data was available for that day, laid out vertically beneath its day. I ran out of time before I could figure out how to organise the data this way but I created components to achieve this effect.
+
+- Error handling. Currently doesn;t gracefully handle issues with fetching data, or the possibility of data not matching what the app expects.
+
+# REACT BOILERPLATE BELOW
+
 # Getting Started with Create React App
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).

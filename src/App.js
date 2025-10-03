@@ -26,6 +26,8 @@ function App() {
 
   function WeatherContent() {
     if (data) {
+      // Ideally this should be broken down by days - each "Day" object would be filled with
+      // WeatherTime objects for that day
       const weatherItems = data.list.map((item) => {
         const date = new Date(item.dt * 1000).toDateString();
         const weatherDataPoint = item.weather[0];
@@ -42,6 +44,7 @@ function App() {
       });
       return weatherItems;
     } else if (isLoading) {
+      // This isn't ideal, rather this should update a string instead of returning the HTML item
       return <div className="Loading-text">Loading...</div>;
     } else {
       return <div className="Loading-text">Tap button to fetch data</div>;

@@ -19,14 +19,15 @@ function App() {
         setLoading(false);
         setData(json);
       })
-      .catch((error) => console.error(error));
+      .catch((error) => {
+        console.error(error);
+      });
   }
 
   function WeatherContent() {
     if (data) {
       const weatherItems = data.list.map((item) => {
         const date = new Date(item.dt * 1000).toDateString();
-        console.log(`Date: ${date}`);
         const weatherDataPoint = item.weather[0];
         let iconUrl = `https://openweathermap.org/img/wn/${weatherDataPoint.icon}@2x.png`;
         return (
@@ -41,9 +42,9 @@ function App() {
       });
       return weatherItems;
     } else if (isLoading) {
-      return <div>Loading...</div>;
+      return <div className="Loading-text">Loading...</div>;
     } else {
-      return <div>Tap button to fetch data</div>;
+      return <div className="Loading-text">Tap button to fetch data</div>;
     }
   }
 
@@ -55,10 +56,11 @@ function App() {
           Get Data
         </button>
       </header>
-
-      <ul className="Days-section">
-        <WeatherContent />
-      </ul>
+      <body>
+        <ul className="Days-section">
+          <WeatherContent />
+        </ul>
+      </body>
     </div>
   );
 }

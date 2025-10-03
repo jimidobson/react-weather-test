@@ -1,7 +1,7 @@
 function WeatherTime(props) {
   return (
     <div className="Weather-item-parent">
-      <img src={props.icon} alt="" />
+      <img src={props.icon} alt="" className="Weather-item-icon" />
       <li key={props.key} className="Weather-item-list">
         <h3>{props.dateTitle}</h3>
         <p>{props.weatherTitle}</p>
@@ -10,3 +10,5 @@ function WeatherTime(props) {
     </div>
   );
 }
+
+export default WeatherTime;

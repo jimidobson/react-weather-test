@@ -1,12 +1,15 @@
+import WeatherTime from "./WeatherTime";
+
 function Day(props) {
   return (
     <div className="Day-item-parent">
-      <img src={props.icon} alt="" />
-      <li key={props.key} className="Day-item-list">
-        <h3>{props.dateTitle}</h3>
-        <p>{props.weatherTitle}</p>
-        <p>{props.weatherDescription}</p>
-      </li>
+      <WeatherTime
+        key={props.key}
+        icon={props.icon}
+        dateTitle={props.dateTitle}
+        weatherTitle={props.weatherTitle}
+        weatherDescription={props.weatherDescription}
+      />
     </div>
   );
 }

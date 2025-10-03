@@ -42,14 +42,20 @@
   color: #61dafb;
 }
 
+.Loading-text {
+  color: white;
+}
+
 .Days-section {
   background-color: #282c34;
   justify-content: center;
   display: grid;
 }
 
-.Day-item {
+.Day-item-parent {
   background-color: #282c34;
+  justify-content: center;
+  display: grid;
 }
 
 .Weather-item-parent {
@@ -63,6 +69,12 @@
   color: white;
 }
 
+.Weather-item-icon {
+  display: block;
+  margin: auto;
+  width: 50%;
+}
+
 @keyframes App-logo-spin {
   from {
     transform: rotate(0deg);
@@ -74,4 +86,11 @@
 
 ul {
   list-style-type: none;
+}
+
+.center {
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  width: 50%;
 }
